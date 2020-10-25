@@ -1,7 +1,6 @@
-FROM ubuntu
-RUN apt-get update
-RUN apt-get install -y python3 python3-pip git
-RUN apt install npm -y
+FROM alpine
+RUN apk update
+RUN add --no-cache python3 python3-pip git npm
 RUN pip3 install flask flask_cors docutils
 RUN mkdir /app
 WORKDIR /app
