@@ -1,6 +1,6 @@
 FROM alpine
 RUN apk update
-RUN add --no-cache python3 python3-pip git npm
+RUN apk add --no-cache python3 py3-pip git npm
 RUN pip3 install flask flask_cors docutils
 RUN mkdir /app
 WORKDIR /app
