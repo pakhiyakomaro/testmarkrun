@@ -1,6 +1,7 @@
 FROM ubuntu
 RUN apt-get update
-RUN apt-get install -y python3 python3-pip git npm
+RUN apt-get install -y python3 python3-pip git
+RUN apt install npm -y
 RUN pip3 install flask flask_cors docutils
 RUN mkdir /app
 WORKDIR /app
